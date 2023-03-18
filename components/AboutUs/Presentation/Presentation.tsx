@@ -10,7 +10,7 @@ const Presentation: FC = () => {
       sx={{
         position: "relative",
         height: { xs: "40vh", md: "50vh" },
-        backgroundColor: "transparent",
+        backgroundColor: "black",
         backgroundImage:
           "url(https://cdn.pixabay.com/photo/2016/12/22/18/20/skyline-1925943_1280.jpg)",
         backgroundSize: "cover",
