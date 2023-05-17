@@ -1,9 +1,7 @@
 import { Container, Box, Typography, Grid } from "@mui/material";
 import { FC } from "react";
 import Link from "next/link";
-import ConstructionIcon from "@mui/icons-material/Construction";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import HouseSidingIcon from "@mui/icons-material/HouseSiding";
+import ServiceCard from "./Molecules/ServiceCard";
 
 interface ILeftSectionGridProps {
   scroll?: number;
@@ -41,11 +39,12 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
               mt: 5,
               fontSize: { xs: "1.8rem", md: "2rem" },
               color: "#ff4d4d",
+              mx: 1,
             }}
             component="span"
           >
             Bienvenida
-          </Typography>{" "}
+          </Typography>
           al lugar correcto
         </Typography>
         <Typography
@@ -100,7 +99,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
           </Link>
         </Box>
         <Box sx={{ mt: "4rem" }}>
-          <Grid container>
+          <Grid container columnSpacing={10}>
             <Grid
               item
               xs={12}
@@ -115,22 +114,11 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                 mb: 3,
               }}
             >
-              <ConstructionIcon
-                sx={{ width: "auto", height: "100px", color: "#f9cb28" }}
+              <ServiceCard
+                description="Construccion de estructuras y edificaciones en general"
+                img="./image/construccion.jpg"
+                name="Construcciones"
               />
-              <Box>
-                <Typography
-                  sx={{
-                    fontSize: "1.5rem",
-                    lineHeight: 2,
-                    fontWeight: 700,
-                    zIndex: 2,
-                    textAlign: "center",
-                  }}
-                >
-                  Construcciones
-                </Typography>
-              </Box>
             </Grid>
             <Grid
               item
@@ -146,22 +134,11 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                 mb: 3,
               }}
             >
-              <ApartmentIcon
-                sx={{ width: "auto", height: "100px", color: "#f9cb28" }}
+              <ServiceCard
+                description="Acabados modernos y con un excelente nivel de profesionalismo"
+                img="./image/acabados.jpg"
+                name="Acabados"
               />
-              <Box>
-                <Typography
-                  sx={{
-                    fontSize: "1.5rem",
-                    lineHeight: 2,
-                    fontWeight: 700,
-                    zIndex: 2,
-                    textAlign: "center",
-                  }}
-                >
-                  Acabados
-                </Typography>
-              </Box>
             </Grid>
             <Grid
               item
@@ -177,22 +154,11 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                 mb: 3,
               }}
             >
-              <HouseSidingIcon
-                sx={{ width: "auto", height: "100px", color: "#f9cb28" }}
+              <ServiceCard
+                description="Remodelacion de interiores y exteriores. Dale la vuelta a la página."
+                img="./image/remodelacion.jpg"
+                name="Remodelaciones"
               />
-              <Box>
-                <Typography
-                  sx={{
-                    fontSize: "1.5rem",
-                    lineHeight: 2,
-                    fontWeight: 700,
-                    zIndex: 2,
-                    textAlign: "center",
-                  }}
-                >
-                  Remodelaciones
-                </Typography>
-              </Box>
             </Grid>
           </Grid>
         </Box>

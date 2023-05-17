@@ -1,4 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
+import Link from "next/link";
 
 const Services = [
   "Diseño",
@@ -50,7 +51,7 @@ const ListServices = () => {
               borderRadius: 1,
             }}
           >
-            Ver todo
+            <Link href={"/#services"}>Ver todo</Link>
           </Typography>
         </Grid>
       </Grid>

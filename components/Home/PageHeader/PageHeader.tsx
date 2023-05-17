@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { FC, useState } from "react";
 import { InView } from "react-intersection-observer";
 import GradientText from "../../GradientText/GradientText";
@@ -75,6 +75,16 @@ const BannerPrincipal: FC = () => {
                 }}
               >
                 Peniel
+                <Typography
+                  component={"span"}
+                  sx={{
+                    fontSize: "1.5rem",
+                    fontWeight: 900,
+                    ml: 2,
+                  }}
+                >
+                  SAS
+                </Typography>
               </Box>
             </Box>
           </InView>

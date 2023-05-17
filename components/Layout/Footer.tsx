@@ -9,11 +9,12 @@ import {
   Typography,
 } from "@mui/material";
 import { SxProps } from "@mui/material/styles";
-import Link from "@mui/material/Link";
+import MUILink from "@mui/material/Link";
 import Image from "next/image";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Link from "next/link";
 
 interface IProps {
   sx?: SxProps;
@@ -23,9 +24,9 @@ function Copyright(props: IProps) {
   return (
     <Typography variant="body2" align="center" {...props}>
       {"Copyright © "}
-      <Link color="inherit" href="#">
+      <MUILink color="inherit" href="#">
         Construcciones y acabados peniel SAS
-      </Link>{" "}
+      </MUILink>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -54,21 +55,44 @@ const Footer = () => {
               <Typography sx={{ fontWeight: 700 }}>Nosotros</Typography>
               <Typography
                 component={"li"}
-                sx={{ listStyle: "none", mt: 2, fontSize: "0.9rem" }}
+                sx={{
+                  listStyle: "none",
+                  mt: 2,
+                  fontSize: "0.9rem",
+                  "&>a": {
+                    color: "white",
+                  },
+                }}
               >
-                Sobre nosotros
+                <Link href={"/nosotros"}>Sobre nosotros</Link>
               </Typography>
               <Typography
                 component={"li"}
-                sx={{ listStyle: "none", mt: 2, fontSize: "0.9rem" }}
+                sx={{
+                  listStyle: "none",
+                  mt: 2,
+                  fontSize: "0.9rem",
+                  "&>a": {
+                    color: "white",
+                  },
+                }}
               >
-                Terminos y condiciones
+                <Link href={"/terminos-condicioes"}>
+                  Terminos y condiciones
+                </Link>
               </Typography>
               <Typography
                 component={"li"}
-                sx={{ listStyle: "none", mt: 2, fontSize: "0.9rem" }}
+                sx={{
+                  listStyle: "none",
+                  mt: 2,
+                  fontSize: "0.9rem",
+                  "&>a": {
+                    color: "white",
+                  },
+                }}
               >
-                Politicas
+                <Link href={"/politicas"}>Politicas</Link>
               </Typography>
             </Box>
           </Grid>
@@ -79,7 +103,7 @@ const Footer = () => {
                 component={"li"}
                 sx={{ listStyle: "none", mt: 2, fontSize: "0.9rem" }}
               >
-                Calle 96a sur 14q-18 Bogotá, <br />
+                Carrera 81C # 45 Sur 59 Bogotá, <br />
                 Colombia
               </Typography>
               <Typography
@@ -92,7 +116,7 @@ const Footer = () => {
                 component={"li"}
                 sx={{ listStyle: "none", mt: 2, fontSize: "0.9rem" }}
               >
-                Bogotá (57 1) 6678489
+                Bogotá (57 601) 4639392
               </Typography>
               <Typography
                 component={"li"}
@@ -103,11 +127,13 @@ const Footer = () => {
               <ButtonGroup sx={{ mt: 2, fontSize: "0.9rem" }}>
                 <IconButton
                   sx={{
-                    bgcolor: "white",
+                    bgcolor: "#24d366",
+                    color: "white",
                     p: 0.5,
                     mr: 1,
                     "&:hover": {
-                      background: "white",
+                      background: "#24d366",
+                      color: "white",
                     },
                   }}
                 >
@@ -115,11 +141,13 @@ const Footer = () => {
                 </IconButton>
                 <IconButton
                   sx={{
-                    bgcolor: "white",
+                    bgcolor: "#1a77f2",
+                    color: "white",
                     p: 0.5,
                     mr: 1,
                     "&:hover": {
-                      background: "white",
+                      background: "#1a77f2",
+                      color: "white",
                     },
                   }}
                 >
@@ -129,11 +157,18 @@ const Footer = () => {
                 </IconButton>
                 <IconButton
                   sx={{
-                    bgcolor: "white",
+                    backgroundColor: "yellow",
+                    backgroundImage:
+                      "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+                    color: "white",
                     p: 0.5,
                     mr: 1,
                     "&:hover": {
-                      background: "white",
+                      color: "white",
+                      backgroundImage:
+                        "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+                      backgroundColor:
+                        "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
                     },
                   }}
                 >
@@ -167,7 +202,7 @@ const Footer = () => {
           <Copyright />
 
           <Typography variant="body2" align="center">
-            NIT: 800013514834-4
+            NIT: 901538425-5
           </Typography>
           <Typography
             sx={{ mt: 2, mb: 2, color: "inherit" }}
@@ -176,7 +211,7 @@ const Footer = () => {
             Powered by
           </Typography>
           <Typography variant="body2" align="center">
-            <Link color="inherit">Developer Information</Link>
+            <MUILink color="inherit">Developer Information</MUILink>
           </Typography>
         </Grid>
         <Grid
@@ -191,7 +226,7 @@ const Footer = () => {
             alignItems: "center",
           }}
         >
-          <Link
+          <MUILink
             href="https://www.ccb.org.co/"
             about="camara-comercio-bogota"
             sx={{ backgroundColor: "white", p: 1, borderRadius: 2 }}
@@ -202,7 +237,7 @@ const Footer = () => {
               src={"/image/ccb_icon.png"}
               alt={"camara-comercio-bogota"}
             />
-          </Link>
+          </MUILink>
         </Grid>
       </Grid>
     </Box>

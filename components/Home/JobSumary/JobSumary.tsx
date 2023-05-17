@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import { FC, useState } from "react";
 import { InView } from "react-intersection-observer";
 import useTheme from "../../../util/hooks/useTheme";
+import PhotoViewer from "./Atoms/PhotoViewer";
 
 interface IRightSectionGridProps {
   scroll?: number;
@@ -33,21 +34,11 @@ const OurClients: FC<IRightSectionGridProps> = () => {
               justifyContent: "center",
               display: "flex",
               flexDirection: "column",
-              backgroundColor: "white",
               zIndex: 1,
               mb: { xs: 5, sm: 0 },
             }}
           >
-            <Box
-              sx={{
-                backgroundImage: "url(/image/pcref.webp)",
-                width: "100%",
-                height: { xs: "300px", md: "600px" },
-                backgroundPosition: "center",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></Box>
+            <PhotoViewer />
           </Grid>
           <Grid
             item

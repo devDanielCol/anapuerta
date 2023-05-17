@@ -135,7 +135,8 @@ const EndPage: FC = () => {
                 borderTopRightRadius: "24px",
                 borderBottomRightRadius: "24px",
                 backgroundColor: "#fff",
-                backgroundImage: "url(/image/home3.jpg)",
+                backgroundImage:
+                  "url(https://images.pexels.com/photos/93400/pexels-photo-93400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

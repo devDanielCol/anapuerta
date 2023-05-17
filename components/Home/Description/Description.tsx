@@ -12,97 +12,112 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
   const [text, setText] = useState<boolean>(false);
 
   return (
-    <Box sx={{ backgroundColor: "#0a0f11", color: "white" }}>
-      <InView
-        onChange={(inView) => {
-          setInView(inView);
-          console.log(inView);
+    <Box
+      sx={{
+        backgroundColor: "#0a0f11",
+        color: "white",
+        backgroundImage: "url(./image/experts-1.jpg)",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <Box
+        sx={{
+          backgroundColor: "#0a0f11b3",
         }}
-        threshold={0.85}
       >
-        <Container
-          sx={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
+        <InView
+          onChange={(inView) => {
+            setInView(inView);
+            console.log(inView);
           }}
+          threshold={0.85}
         >
-          <Box
+          <Container
             sx={{
+              width: "100%",
               display: "flex",
-              flexDirection: "column",
-              py: "8rem",
-              px: 2,
-              opacity: inView ? "100%" : "0%",
-              transition: "all .5s linear",
-              overflow: "hidden",
+              justifyContent: "center",
             }}
           >
-            <InView
-              onChange={(inView) => {
-                setText(inView);
-              }}
-              threshold={1}
-              rootMargin={"200px 0px 0px 0px"}
-              delay={100}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  flexDirection: "row",
-                  transition: "all 1 linear",
-                }}
-              >
-                {"Expertos".split("").map((letter, index) => (
-                  <Typography
-                    key={index}
-                    sx={{
-                      fontWeight: 500,
-                      zIndex: 1,
-                      boxSizing: "border-box",
-                      padding: 0,
-                      color: "#03a9f4",
-                      lineHeight: 1,
-                      fontSize: { xs: "3.5rem", lg: "7rem" },
-                      transition: "all .4s linear",
-                      display: "flex",
-                      ...waveMove(index * 100, text),
-                    }}
-                  >
-                    {letter}
-                  </Typography>
-                ))}
-              </Box>
-            </InView>
-            <Typography
+            <Box
               sx={{
-                mt: "4rem",
-                fontSize: { xs: "1.1rem", md: "1.5rem" },
-                textAlign: "center",
-                color: "#90a4ae",
+                display: "flex",
+                flexDirection: "column",
+                py: "8rem",
+                px: 2,
+                opacity: inView ? "100%" : "0%",
+                transition: "all .5s linear",
+                overflow: "hidden",
               }}
             >
-              Con nosotros{" "}
+              <InView
+                onChange={(inView) => {
+                  setText(inView);
+                }}
+                threshold={1}
+                rootMargin={"200px 0px 0px 0px"}
+                delay={100}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "row",
+                    transition: "all 1 linear",
+                  }}
+                >
+                  {"Expertos".split("").map((letter, index) => (
+                    <Typography
+                      key={index}
+                      sx={{
+                        fontWeight: 500,
+                        zIndex: 1,
+                        boxSizing: "border-box",
+                        padding: 0,
+                        color: "#03a9f4",
+                        lineHeight: 1,
+                        fontSize: { xs: "3.5rem", lg: "7rem" },
+                        transition: "all .4s linear",
+                        display: "flex",
+                        ...waveMove(index * 100, text),
+                      }}
+                    >
+                      {letter}
+                    </Typography>
+                  ))}
+                </Box>
+              </InView>
               <Typography
                 sx={{
-                  mt: 5,
+                  mt: "4rem",
                   fontSize: { xs: "1.1rem", md: "1.5rem" },
+                  textAlign: "center",
                   color: "white",
                 }}
-                component="span"
               >
-                Construcciones y acabados Peniel
-              </Typography>{" "}
-              Tienes el alto nivel que necesitas de calidad, buena atención y
-              alta demanda en servicios de remodelacion, construccion y
-              acabados. Ya que contamos con las mejores tecnicas, buenas
-              practicas y excelente capacidad en todos nuestros trabajos,
-            </Typography>
-          </Box>
-        </Container>
-      </InView>
+                Con nosotros{" "}
+                <Typography
+                  sx={{
+                    mt: 5,
+                    fontSize: { xs: "1.1rem", md: "1.5rem" },
+                    color: "white",
+                  }}
+                  component="span"
+                >
+                  Construcciones y acabados Peniel
+                </Typography>{" "}
+                Tienes el alto nivel que necesitas de calidad, buena atención y
+                alta demanda en servicios de remodelacion, construccion y
+                acabados. Ya que contamos con las mejores tecnicas, buenas
+                practicas y excelente capacidad en todos nuestros trabajos,
+              </Typography>
+            </Box>
+          </Container>
+        </InView>
+      </Box>
     </Box>
   );
 };

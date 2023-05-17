@@ -44,11 +44,11 @@ const Content: FC<IContentProps> = ({ children, title, description }) => {
               bottom: "80px",
               right: "20px",
               zIndex: 1000,
-              backgroundColor: "#fff",
+              backgroundColor: "#24d366",
               "&:hover": {
-                backgroundColor: "#fff",
+                backgroundColor: "#24d366",
               },
-              color: "#24d366",
+              color: "white",
             }}
           >
             <WhatsAppIcon sx={{ width: "50px", height: "50px" }} />
