@@ -72,11 +72,12 @@ const PhotoViewer = () => {
                 alignItems: "end",
               }}
             >
-              <IconButton
+              <Box
                 component="div"
                 sx={{
                   backgroundColor: "black",
-                  fontSize: "0.5rem",
+                  fontSize: "0.9rem",
+                  p: 0.5,
                   color: "white",
                   m: 0.5,
                   "&:hover": {
@@ -85,7 +86,7 @@ const PhotoViewer = () => {
                 }}
               >
                 {img.id}
-              </IconButton>
+              </Box>
             </Box>
           </Box>
         </Box>
