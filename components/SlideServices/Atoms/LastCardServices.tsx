@@ -11,7 +11,7 @@ const LastCardServices: FC = () => {
   return (
     <Box
       sx={{
-        height: { xs: "150px", md: "220px" },
+        height: { xs: "180px", md: "220px" },
         width: { xs: "180px", md: "240px" },
         p: { xs: "26px", md: "36px" },
         backgroundImage:
@@ -58,7 +58,7 @@ const LastCardServices: FC = () => {
       >
         <Link
           target={"_blank"}
-          sx={{ color: "inherit", textDecoration: "none" }}
+          sx={{ color: "inherit", textDecoration: "underline" }}
           href={`https://wa.me/573203373213?text=Hola, quisiera tener mas información sobre los servicios de Construcciones y acabados Peniel`.replace(
             " ",
             "+"

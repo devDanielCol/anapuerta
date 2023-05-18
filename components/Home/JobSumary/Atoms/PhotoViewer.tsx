@@ -1,13 +1,13 @@
 import PhotoAlgth, { INodeData } from "../algthms/PhotoAlgth";
-import { Container, Box } from "@mui/material";
+import { Container, Box, IconButton } from "@mui/material";
 import { useState } from "react";
 
 const photoList = [
-  "image/photo_viewer/photo1.jpg",
+  "image/photo_viewer/photo5.jpg",
   "image/photo_viewer/photo2.jpg",
   "image/photo_viewer/photo3.jpg",
   "image/photo_viewer/photo4.jpg",
-  "image/photo_viewer/photo5.jpg",
+  "image/photo_viewer/photo1.jpg",
 ];
 
 const PhotoViewer = () => {
@@ -38,7 +38,7 @@ const PhotoViewer = () => {
           sx={{
             ...img.styles,
             position: "absolute",
-            transition: "all 1s linear",
+            transition: "all 0.6s linear",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -46,10 +46,49 @@ const PhotoViewer = () => {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundOrigin: "border-box",
+            borderRadius: "8px",
           }}
           key={key}
           onClick={selectPhoto(img.id)}
-        ></Box>
+        >
+          <Box
+            sx={{
+              width: "100%",
+              height: "100%",
+              position: "relative",
+              borderRadius: "8px",
+            }}
+          >
+            <Box
+              sx={{
+                width: "100%",
+                height: "100%",
+                position: "absolute",
+                transition: "all 0.3s linear",
+                fontWeight: 600,
+                borderRadius: "8px",
+                display: "flex",
+                justifyContent: "end",
+                alignItems: "end",
+              }}
+            >
+              <IconButton
+                component="div"
+                sx={{
+                  backgroundColor: "black",
+                  fontSize: "0.9rem",
+                  color: "white",
+                  m: 1,
+                  "&:hover": {
+                    backgroundColor: "black",
+                  },
+                }}
+              >
+                {img.id}
+              </IconButton>
+            </Box>
+          </Box>
+        </Box>
       ))}
     </Container>
   );
