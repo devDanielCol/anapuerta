@@ -11,8 +11,7 @@ const Presentation: FC = () => {
         position: "relative",
         height: { xs: "40vh", md: "50vh" },
         backgroundColor: "black",
-        backgroundImage:
-          "url(https://cdn.pixabay.com/photo/2016/12/22/18/20/skyline-1925943_1280.jpg)",
+        backgroundImage: "url(image/about_us.jpg)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
