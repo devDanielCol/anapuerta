@@ -77,7 +77,7 @@ const Footer = () => {
                   },
                 }}
               >
-                <Link href={"/terminos-condicioes"}>
+                <Link href={"/terminos-condiciones"}>
                   Terminos y condiciones
                 </Link>
               </Typography>
