@@ -1,21 +1,22 @@
 import PhotoAlgth, { INodeData } from "../algthms/PhotoAlgth";
 import { Container, Box } from "@mui/material";
 import { useState } from "react";
-import stringToColor from "../../../../util/helpers/stringToColor";
 
 const photoList = [
-  "image/acabados.jpg",
-  "image/construccion.jpg",
-  "image/experts-1.jpg",
-  "image/remodelacion.jpg",
-  "image/home3.jpg",
+  "image/photo_viewer/photo1.jpg",
+  "image/photo_viewer/photo2.jpg",
+  "image/photo_viewer/photo3.jpg",
+  "image/photo_viewer/photo4.jpg",
+  "image/photo_viewer/photo5.jpg",
 ];
 
 const PhotoViewer = () => {
   const photos = new PhotoAlgth();
+
   for (let i = 0; i < photoList.length; i++) {
     photos.insert(null, photoList[i], i);
   }
+
   const [images, setImages] = useState<INodeData[]>(photos.traverse());
 
   const selectPhoto = (photoId: string) => () => {
@@ -35,8 +36,9 @@ const PhotoViewer = () => {
       {images?.map((img, key) => (
         <Box
           sx={{
+            ...img.styles,
             position: "absolute",
-            transition: "all .4s linear",
+            transition: "all 1s linear",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -44,8 +46,6 @@ const PhotoViewer = () => {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundOrigin: "border-box",
-            ...img.styles,
-            backgroundColor: stringToColor(String(Math.random())),
           }}
           key={key}
           onClick={selectPhoto(img.id)}

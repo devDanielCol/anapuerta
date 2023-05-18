@@ -99,10 +99,10 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
           </Link>
         </Box>
         <Box sx={{ mt: "4rem" }}>
-          <Grid container columnSpacing={10}>
+          <Grid container columnSpacing={10} sx={{ justifyContent: "center" }}>
             <Grid
               item
-              xs={12}
+              xs={8}
               sm={4}
               md={4}
               sx={{
@@ -122,7 +122,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
             </Grid>
             <Grid
               item
-              xs={12}
+              xs={8}
               sm={4}
               md={4}
               sx={{
@@ -142,7 +142,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
             </Grid>
             <Grid
               item
-              xs={12}
+              xs={8}
               sm={4}
               md={4}
               sx={{

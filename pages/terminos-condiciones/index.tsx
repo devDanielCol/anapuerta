@@ -26,21 +26,20 @@ export default function Home() {
                 Terminos y condiciones
               </Typography>
               <Typography component={"p"} sx={{ mt: 3 }}>
-                Los terminos y condiciones son legales y que dicen y especifican
-                los temrinos y condiciones de uso que tiene una app para poder
-                ser usada
+                El uso y consumo del contenido expuesto en este sitio web esta
+                bajo supervision de sus administradores, peniel sas se reserva
+                el derecho de publicar cualquier cambio en el contenido de este
+                sition web sin previo aviso a sus usuarios. Para mejorar la
+                calidad de sus productos tecnologicos, PENIEL SAS esta en
+                continuo desarrollo y crecimiento para incrementar sus servicios
+                y calidad de sus sitemas.
               </Typography>
               <Typography component={"p"} sx={{ mt: 3 }}>
-                Somos una compañia comprometida con el resultado de nuestros
-                trabajos, procuramos cumplir y entregar cada proyecto de la
-                mejor manera con un alto estandar de calidad, creamos soluciones
-                de construccion de cabados y de construccion en general.
-                Probablemente tienes en mente remodelar tu oficina, tu casa o un
-                edificio por completo y necesitas de expertos para llevar a cabo
-                esta tarea. Nosotros entendemos cada necesidad existente en el
-                entorno de trabajo, realizamos observaciones preliminares y
-                validamos las condiciones actualies versus la imagen proyectada
-                a futuro.
+                Esta pagina web tiene como fin alcanzar a publico de cualquier
+                tipo, este sitio web provee informacion necesaria para contactar
+                y contratar los servicios de construccion y ofertas de
+                remodelación y demás servicios relacionados con el desarrollo de
+                sus actividades economicas.
               </Typography>
             </Box>
             <Box component={"section"}>
@@ -56,14 +55,20 @@ export default function Home() {
                 Condiciones de uso
               </Typography>
               <Typography component={"p"} sx={{ mt: 3 }}>
-                Tenemos una vision completemante clara en{" "}
-                <b>Construcciones y acabados peniel sas</b> sabemos que los
-                resultados no se miden por la cantidad de proyectos abiertos,
-                sino por la felicidad otorgada a nuestros clientes.
-                <br />
-                Nuestra meta primordial, es competir dentro del mercado nacional
-                de infraestructura y desarrollar proyectos inovadores de calidad
-                y de talla mundial, usando lo ultimo en tecnologia.
+                Este sitio web, como su contenido está protegido bajo las
+                politicas de copyright, plagio o suplantación segun lo
+                relacionado con los terminos nacionales e internacionales, en
+                donde PENIEL SAS tiene participación. El uso inadecuado de esté
+                sitio web, así mismo como el intento de robo, clonación o
+                exposición de información no debida para dañar el nombre de
+                PENIEL SAS o de sus colaboradores, está prohibido, y cualquier
+                caso que se presente o llegará a presentarse que genere una mala
+                imagen de la marca, así mismo de su reputación, utilidades,
+                registro de clientes, crecimiento, ampliación o cualquier otra
+                razon que afecte el desarrollo económico, laboral, competitivo,
+                el ente causante de lo dicho anteriormente será denunciado y
+                tratado segun las leyes colombianas y estará obligado a pagar el
+                100% de los daños causados.
               </Typography>
             </Box>
             <Box component={"section"} sx={{ mb: 4, mt: 3 }}>
@@ -75,25 +80,8 @@ export default function Home() {
                   textAlign: "left",
                   mt: 3,
                 }}
-              >
-                Datos de contacto
-              </Typography>
-              <Typography component={"ul"} sx={{ mt: 3 }}>
-                <Typography component={"li"}>Compromiso</Typography>
-                <Typography component={"li"}>Responsabilidad</Typography>
-                <Typography component={"li"}>Comunicación continua</Typography>
-                <Typography component={"li"}>Rentabilidad</Typography>
-                <Typography component={"li"}>Estabilidad</Typography>
-                <Typography component={"li"}>Atencion</Typography>
-              </Typography>
-              <Typography component={"p"} sx={{ mt: 3 }}>
-                Creemos que los valores son importantes, y que nos describen
-                como empresa, por esa razon somos comprometidos con nuestras
-                labores, contamos con un alta responsabildiad a la hora de
-                atender solicitudes y una comunicacion continua para que
-                nuestros clientes sepan de cada avance y de cada resultado
-                obtenido.
-              </Typography>
+              ></Typography>
+              <Typography component={"p"} sx={{ mt: 3 }}></Typography>
             </Box>
           </Box>
         </Box>

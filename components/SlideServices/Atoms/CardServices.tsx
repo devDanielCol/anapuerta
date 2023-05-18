@@ -53,11 +53,18 @@ const CardServices: FC<CardServicesProps> = ({
         </Typography>
       </Box>
       <Typography
-        sx={{ mt: { xs: 1, md: 0 }, fontSize: { xs: "1rem", md: "1.5rem" } }}
+        sx={{
+          mt: { xs: 1, md: 0 },
+          fontSize: { xs: "1rem", md: "1.5rem" },
+          "&>a": { textDecoration: "none", color: "white" },
+          backgroundColor: "#ff4d4d",
+          textAlign: "center",
+          borderRadius: "8px",
+        }}
       >
         <Link
           target={"_blank"}
-          href={`https://wa.me/573203373213?text=Hola, estoy interesado en recibir informacioin sobre ${title}`}
+          href={`https://wa.me/573203379213?text=Hola, estoy interesado en recibir informacioin sobre ${title}`}
         >
           Cotizar
         </Link>

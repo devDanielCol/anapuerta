@@ -25,7 +25,7 @@ const ContactOpt: FC<ContactOptProps> = ({
 
   return (
     <>
-      <Link href={linkTo} sx={{ textDecoration: "none" }}>
+      <Link href={linkTo} target="__blank" sx={{ textDecoration: "none" }}>
         <Box
           onMouseOver={() => {
             setOpen(true);

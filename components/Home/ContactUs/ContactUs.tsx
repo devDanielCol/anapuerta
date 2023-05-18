@@ -61,6 +61,9 @@ const EndPage: FC = () => {
                 <Grid item xs={4}>
                   <Button
                     variant="contained"
+                    onClick={() => {
+                      self.open("tel:3203379213", "__blank");
+                    }}
                     sx={{
                       fontSize: { xs: "0.5rem", sm: "1rem", md: "1rem" },
                       width: "100%",
@@ -83,6 +86,9 @@ const EndPage: FC = () => {
                 <Grid item xs={4}>
                   <Button
                     variant="contained"
+                    onClick={() => {
+                      self.open("https://wa.me/3203379213", "__blank");
+                    }}
                     sx={{
                       fontSize: { xs: "0.5rem", sm: "1rem", md: "1rem" },
                       width: "100%",
@@ -105,6 +111,12 @@ const EndPage: FC = () => {
                 <Grid item xs={4}>
                   <Button
                     variant="contained"
+                    onClick={() => {
+                      self.open(
+                        "mailto:construccionesyacabadospeniel@gmail.com",
+                        "__blank"
+                      );
+                    }}
                     sx={{
                       fontSize: { xs: "0.5rem", sm: "1rem", md: "1rem" },
                       width: "100%",

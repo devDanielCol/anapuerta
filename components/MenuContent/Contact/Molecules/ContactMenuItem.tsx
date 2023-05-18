@@ -11,13 +11,13 @@ export const socialMedia = [
     name: "Facebook",
     icon: <FacebookRoundedIcon />,
     description: "Siguenos y comparte",
-    href: "/",
+    href: "https://www.facebook.com/profile.php?id=100075904522414&mibextid=ZbWKwL",
   },
   {
     name: "Instagram",
     icon: <InstagramIcon />,
     description: "Mira imagenes y videos",
-    href: "/",
+    href: "https://instagram.com/construccionespeniel?igshid=YmMyMTA2M2Y=",
   },
   {
     name: "WhatsApp",

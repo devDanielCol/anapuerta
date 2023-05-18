@@ -48,6 +48,7 @@ const Article = () => {
               y nuestro correo electrónico
               <Typography
                 component={"a"}
+                sx={{ lineBreak: "anywhere", mx: 1 }}
                 href="mailto:construccionesyacabadospeniel@gmail.com."
               >
                 construccionesyacabadospeniel@gmail.com

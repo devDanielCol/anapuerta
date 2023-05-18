@@ -126,6 +126,9 @@ const Footer = () => {
               </Typography>
               <ButtonGroup sx={{ mt: 2, fontSize: "0.9rem" }}>
                 <IconButton
+                  onClick={() => {
+                    self.open("https://wa.me/3203379213", "__blank");
+                  }}
                   sx={{
                     bgcolor: "#24d366",
                     color: "white",
@@ -140,6 +143,12 @@ const Footer = () => {
                   <WhatsAppIcon sx={{ width: "20px", height: "20px" }} />
                 </IconButton>
                 <IconButton
+                  onClick={() => {
+                    self.open(
+                      "https://www.facebook.com/profile.php?id=100075904522414&mibextid=ZbWKwL",
+                      "__blank"
+                    );
+                  }}
                   sx={{
                     bgcolor: "#1a77f2",
                     color: "white",
@@ -156,6 +165,12 @@ const Footer = () => {
                   />
                 </IconButton>
                 <IconButton
+                  onClick={() => {
+                    self.open(
+                      "https://instagram.com/construccionespeniel?igshid=YmMyMTA2M2Y=",
+                      "__blank"
+                    );
+                  }}
                   sx={{
                     backgroundColor: "yellow",
                     backgroundImage:
