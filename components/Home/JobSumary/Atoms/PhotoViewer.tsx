@@ -76,9 +76,9 @@ const PhotoViewer = () => {
                 component="div"
                 sx={{
                   backgroundColor: "black",
-                  fontSize: "0.9rem",
+                  fontSize: "0.5rem",
                   color: "white",
-                  m: 1,
+                  m: 0.5,
                   "&:hover": {
                     backgroundColor: "black",
                   },
