@@ -82,7 +82,7 @@ const Footer = () => {
                   },
                 }}
               >
-                <Link href={"/politicas"}>Politicas</Link>
+                <Link href={"/contacto"}>Contacto</Link>
               </Typography>
             </Box>
           </Grid>

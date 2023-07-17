@@ -11,8 +11,8 @@ export const socialMedia = [
     href: "/terminos-condiciones",
   },
   {
-    name: "Políticas",
-    href: "/politicas",
+    name: "Contacto",
+    href: "/contacto",
   },
 ];
 
