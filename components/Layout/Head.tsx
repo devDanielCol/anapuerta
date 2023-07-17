@@ -7,7 +7,7 @@ interface Props {
   description: string;
   keywords?: string[];
   ogImage?: string;
-  url?: string;
+  url: string;
 }
 
 const HeadDocument: FC<Props> = ({
@@ -113,6 +113,7 @@ const HeadDocument: FC<Props> = ({
         sizes="16x16"
         href="favicon/favicon-16x16.png"
       />
+      <link rel="canonical" href={url} />
       <link rel="manifest" href="/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content={theme.palette.background.default} />

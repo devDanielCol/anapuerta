@@ -23,7 +23,7 @@ export const socialMedia = [
     name: "WhatsApp",
     icon: <WhatsAppIcon />,
     description: "Envianos un mensaje",
-    href: "https://wa.me/3203379213",
+    href: "https://wa.me/573203379213",
   },
   {
     name: "Email",

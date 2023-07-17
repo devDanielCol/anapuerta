@@ -48,6 +48,7 @@ const BannerPrincipal: FC = () => {
                 transition: "all .4s linear",
                 textAlign: { xs: "center", md: "center" },
               }}
+              component={"h1"}
             >
               <GradientText
                 fontSize={{

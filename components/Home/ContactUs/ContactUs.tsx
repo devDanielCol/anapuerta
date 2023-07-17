@@ -86,9 +86,8 @@ const EndPage: FC = () => {
                 <Grid item xs={4}>
                   <Button
                     variant="contained"
-                    onClick={() => {
-                      self.open("https://wa.me/3203379213", "__blank");
-                    }}
+                    href="https://wa.me/573203379213"
+                    target="__blank"
                     sx={{
                       fontSize: { xs: "0.5rem", sm: "1rem", md: "1rem" },
                       width: "100%",

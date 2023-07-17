@@ -59,7 +59,7 @@ const LastCardServices: FC = () => {
         <Link
           target={"_blank"}
           sx={{ color: "inherit", textDecoration: "underline" }}
-          href={`https://wa.me/573203373213?text=Hola, quisiera tener mas información sobre los servicios de Construcciones y acabados Peniel`.replace(
+          href={`https://wa.me/573203379213?text=Hola, quisiera tener mas información sobre los servicios de Construcciones y acabados Peniel`.replace(
             " ",
             "+"
           )}

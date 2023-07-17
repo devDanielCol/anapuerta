@@ -5,6 +5,7 @@ import Description from "../components/Home/Description/Description";
 import JobServices from "../components/Home/JobServices/JobServices";
 import JobSumary from "../components/Home/JobSumary/JobSumary";
 import ContactUs from "../components/Home/ContactUs/ContactUs";
+import FacebookShareButton from "../components/Global/FacebookShare/FacebookShare";
 
 export default function Home() {
   const description =
@@ -22,7 +23,7 @@ export default function Home() {
 
   return (
     <Content
-      title="Home | Peniel construcciones"
+      title="Pagina de inicio | Construcciones y acabados peniel sas, construccionespeniel.com, bogotá, colombia"
       description={description}
       url={url}
       keywords={keywords}
@@ -33,6 +34,7 @@ export default function Home() {
       <JobSumary />
       <ContactUs />
       <JobServices />
+      <FacebookShareButton />
     </Content>
   );
 }

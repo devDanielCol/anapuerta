@@ -11,24 +11,22 @@ import NavbarMobileSimple from "../../Navbar/NavbarMobile/Molecules/NavBarMobile
 interface ContentSimpleProsps {
   children?: ReactNode;
   title: string;
-  description?: string;
+  description: string;
+  keywords?: string[];
+  ogImage?: string;
+  url: string;
 }
 
-const ContentSimple: FC<ContentSimpleProsps> = ({
-  children,
-  title,
-  description,
-}) => {
+const ContentSimple: FC<ContentSimpleProsps> = (props) => {
   return (
     <>
-      <HeadDocument title={title} description={description} />
+      <HeadDocument {...props} />
       <BodyDocument>
         <>
           <NavbarDeskopSimple />
           <NavbarMobileSimple />
-          <>{children}</>
+          <>{props.children}</>
           <FooterDocument />
-
           <IconButton
             href="/#"
             sx={{
@@ -42,7 +40,8 @@ const ContentSimple: FC<ContentSimpleProsps> = ({
             <KeyboardDoubleArrowUpRoundedIcon />
           </IconButton>
           <IconButton
-            href="https://wa.me/3203379213"
+            href="https://wa.me/573203379213"
+            target="__blank"
             sx={{
               position: "fixed",
               bottom: "80px",

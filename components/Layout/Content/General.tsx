@@ -14,7 +14,7 @@ interface IContentProps {
   description: string;
   keywords?: string[];
   ogImage?: string;
-  url?: string;
+  url: string;
 }
 
 const Content: FC<IContentProps> = (props) => {
@@ -41,7 +41,8 @@ const Content: FC<IContentProps> = (props) => {
             <KeyboardDoubleArrowUpRoundedIcon />
           </IconButton>
           <IconButton
-            href="https://wa.me/3203379213"
+            href="https://wa.me/573203379213"
+            target="__blank"
             sx={{
               position: "fixed",
               bottom: "80px",

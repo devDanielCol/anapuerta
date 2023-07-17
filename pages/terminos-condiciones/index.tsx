@@ -2,8 +2,26 @@ import { Container, Box, Typography } from "@mui/material";
 import ContentSimple from "../../components/Layout/Content/Simple";
 
 export default function Home() {
+  const description =
+    "Terminos y condiciones generales de construcciones y acabados peniel sas para su sitio web y servicios";
+  const url = "https://www.construccionespeniel.com/terminos-condiciones";
+  const keywords = [
+    "terminos condiciones",
+    "remodelacion",
+    "construcciones y acabados peniel sas",
+    "construcciones bogota",
+    "construcciones baratas",
+    "remodelacion bogota",
+    "constructora peniel",
+  ];
+
   return (
-    <ContentSimple title="Terminos y condiciones">
+    <ContentSimple
+      title="Terminos y condiciones | Construcciones y acabados peniel sas, bogota, colombia"
+      description={description}
+      keywords={keywords}
+      url={url}
+    >
       <Container maxWidth={"md"}>
         <Box sx={{ minHeight: "100vh" }}>
           <Box component={"article"}>

@@ -4,7 +4,11 @@ import Link from "next/link";
 
 const NotFound404 = () => {
   return (
-    <ContentSimple title="404: NotFoundPage">
+    <ContentSimple
+      title="404: NotFoundPage"
+      url="https://www.construccionespeniel.com/not-found-page"
+      description="pagina no encontrada, no se hallaron resultados para la busqueda, pagina deprecada o fuera de servicio"
+    >
       <Box
         sx={{
           backgroundImage:
