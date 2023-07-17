@@ -1,5 +1,5 @@
 import PhotoAlgth, { INodeData } from "../algthms/PhotoAlgth";
-import { Container, Box, IconButton } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import { useState } from "react";
 
 const photoList = [
