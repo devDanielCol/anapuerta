@@ -7,8 +7,26 @@ import JobSumary from "../components/Home/JobSumary/JobSumary";
 import ContactUs from "../components/Home/ContactUs/ContactUs";
 
 export default function Home() {
+  const description =
+    "Encuentra todo lo relacionado con construccion, remodelación y mejora de interiores y exteriores, servicios de edificacion y remodelacion";
+  const url = "https://www.construccionespeniel.com/";
+  const keywords = [
+    "construccion",
+    "remodelacion",
+    "construcciones y acabados peniel sas",
+    "construcciones bogota",
+    "construcciones baratas",
+    "remodelacion bogota",
+    "constructora peniel",
+  ];
+
   return (
-    <Content title="Home | Peniel construcciones">
+    <Content
+      title="Home | Peniel construcciones"
+      description={description}
+      url={url}
+      keywords={keywords}
+    >
       <PageHeader />
       <AboutUs />
       <Description />

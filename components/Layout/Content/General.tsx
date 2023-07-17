@@ -11,18 +11,21 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 interface IContentProps {
   children?: ReactNode;
   title: string;
-  description?: string;
+  description: string;
+  keywords?: string[];
+  ogImage?: string;
+  url?: string;
 }
 
-const Content: FC<IContentProps> = ({ children, title, description }) => {
+const Content: FC<IContentProps> = (props) => {
   return (
     <>
-      <HeadDocument title={title} description={description} />
+      <HeadDocument {...props} />
       <BodyDocument>
         <>
           <NavbarDeskop />
           <NavbarMobile />
-          <>{children}</>
+          <>{props.children}</>
           <FooterDocument />
 
           <IconButton
