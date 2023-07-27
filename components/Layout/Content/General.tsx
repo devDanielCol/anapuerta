@@ -35,7 +35,12 @@ const Content: FC<IContentProps> = (props) => {
               bottom: "20px",
               right: "20px",
               zIndex: 1000,
-              backgroundColor: "#00000020",
+              backgroundColor: "#ffea00",
+              color: "black",
+              "&:hover": {
+                backgroundColor: "#ffea00",
+                color: "black",
+              },
             }}
           >
             <KeyboardDoubleArrowUpRoundedIcon />

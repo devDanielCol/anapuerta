@@ -1,6 +1,9 @@
+import useTheme from "../../../util/hooks/useTheme";
+
 const FacebookShareButton = () => {
+  const theme = useTheme();
   return (
-    <div>
+    <div style={{ backgroundColor: theme.palette.background.default }}>
       <iframe
         src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.construccionespeniel.com&layout&size&width=99&height=20&appId"
         width="99"

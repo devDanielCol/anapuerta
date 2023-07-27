@@ -14,12 +14,7 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#0a0f11",
         color: "white",
-        backgroundImage: "url(./image/experts-1.jpg)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
       }}
     >
       <Box

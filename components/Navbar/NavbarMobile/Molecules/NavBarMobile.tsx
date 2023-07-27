@@ -107,6 +107,7 @@ const NavbarMobile: FC<NavbarDeskopProps> = (props) => {
                         }}
                       >
                         <Avatar
+                          alt="logo"
                           src="/image/logo.png"
                           sx={{
                             transition: "all .2s linear",

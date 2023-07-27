@@ -4,28 +4,26 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import { FC, ReactElement, useState } from "react";
+import { FC, ReactElement } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface IAccordionMenuItemProps {
   sumary: string | ReactElement;
   children: ReactElement;
+  expanded?: boolean;
+  onClick?(): void;
 }
 
 const AccordionMenuItem: FC<IAccordionMenuItemProps> = ({
   sumary,
   children,
+  expanded,
+  onClick,
 }) => {
-  const [open, setOpen] = useState<boolean>();
-
-  const handleOpenAccordion = () => {
-    setOpen(open);
-  };
-
   return (
     <Accordion
-      expanded={open}
-      onChange={handleOpenAccordion}
+      onChange={onClick}
+      expanded={expanded}
       sx={{
         backgroundColor: "transparent",
         backgroundImage: "none",

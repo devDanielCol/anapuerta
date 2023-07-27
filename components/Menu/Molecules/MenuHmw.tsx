@@ -7,6 +7,8 @@ import AccordionMenuItem from "../Atoms/Accordion";
 import useTheme from "../../../util/hooks/useTheme";
 import ThemeButton from "../../ThemeCtrl/ThemeBtn/ThemeBtn";
 import ToolpitOpt from "../../MenuContent/PagesList/Molecules/PagesList";
+import { useState } from "react";
+import Animate from "../../Global/Animation/Animation";
 
 interface IMenuHmwProps {
   open: boolean;
@@ -16,6 +18,15 @@ interface IMenuHmwProps {
 
 const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
   const theme = useTheme();
+  const [submenu, setSubMenu] = useState<number | null>(null);
+
+  const changeSubmenu = (submenuIndex: number) => () => {
+    if (submenu !== submenuIndex) {
+      setSubMenu(submenuIndex);
+    } else {
+      setSubMenu(null);
+    }
+  };
 
   return (
     <Popover
@@ -56,12 +67,20 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
         }}
       >
         <Box sx={{ width: "100%" }}>
-          <AccordionMenuItem sumary={"Paginas"}>
+          <AccordionMenuItem
+            sumary={"Paginas"}
+            expanded={submenu === 0}
+            onClick={changeSubmenu(0)}
+          >
             <Grid container columnSpacing={1} rowSpacing={1}>
               <ToolpitOpt />
             </Grid>
           </AccordionMenuItem>
-          <AccordionMenuItem sumary={"Soluciones"}>
+          <AccordionMenuItem
+            sumary={"Soluciones"}
+            expanded={submenu === 1}
+            onClick={changeSubmenu(1)}
+          >
             <>
               <AboutUsOpt
                 title="Peniel Construcciones"
@@ -89,15 +108,21 @@ const MenuHmw = ({ open, anchorEl, onCloseFc }: IMenuHmwProps) => {
               ></Box>
             </>
           </AccordionMenuItem>
-          <AccordionMenuItem sumary={"Contacto"}>
+          <AccordionMenuItem
+            sumary={"Contacto"}
+            expanded={submenu === 2}
+            onClick={changeSubmenu(2)}
+          >
             <>
-              {socialMedia.map(({ name, description, icon }, i) => (
-                <ContactOpt
-                  key={i}
-                  icon={icon}
-                  title={name}
-                  description={description}
-                />
+              {socialMedia.map(({ name, description, icon, href }, i) => (
+                <Animate animationNameIn="scale-in-bl" delay={i * 150} key={i}>
+                  <ContactOpt
+                    icon={icon}
+                    title={name}
+                    description={description}
+                    linkTo={href}
+                  />
+                </Animate>
               ))}
             </>
           </AccordionMenuItem>

@@ -1,9 +1,12 @@
 import { Container, Box, Typography } from "@mui/material";
 import SlideServices from "../../SlideServices/Molecules/SlideServices";
+import useTheme from "../../../util/hooks/useTheme";
 
 const ServicesList = () => {
+  const theme = useTheme();
+
   return (
-    <>
+    <Box sx={{ backgroundColor: theme.palette.background.default }}>
       <Container id="services" sx={{ width: "100%" }}>
         <Box
           sx={{
@@ -49,7 +52,7 @@ const ServicesList = () => {
           sx={{ display: { xs: "none", lg: "block" } }}
         />
       </Box>
-    </>
+    </Box>
   );
 };
 

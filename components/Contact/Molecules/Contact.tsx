@@ -60,7 +60,7 @@ const Contact = ({ request }: IHeaderProps) => {
                 }}
                 textAlign={{ xs: "center", md: "center" }}
                 letterSpacing={{ xs: "-2px", sm: "-3px" }}
-                sx={{ fontWeight: 700 }}
+                sx={{ fontWeight: 700, lineHeight: 1 }}
               >
                 Contactános facilmente
               </Typography>
@@ -138,7 +138,24 @@ const Contact = ({ request }: IHeaderProps) => {
         </Box>
         <FacebookShareButton />
       </Box>
-      <Swiper slidesPerView={17} className="mySwiper">
+      <Swiper
+        slidesPerView={5}
+        breakpoints={{
+          640: {
+            slidesPerView: 7,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 11,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 17,
+            spaceBetween: 50,
+          },
+        }}
+        className="mySwiper"
+      >
         {request.map(({ name, flags }, i) => {
           return (
             <SwiperSlide key={i}>

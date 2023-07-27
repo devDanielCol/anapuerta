@@ -83,6 +83,7 @@ const NavbarDeskop = (props: NavbarDeskopProps) => {
                     }}
                   >
                     <Avatar
+                      alt="logo"
                       src="/image/logo.png"
                       sx={{
                         transition: "all .2s linear",

@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import AboutUsOpt from "../Atoms/AboutUsOpt";
 import ListServices from "../Atoms/ListServices";
+import Animate from "../../../Global/Animation/Animation";
 
 const AboutUsMenuItem = () => {
   return (
@@ -13,16 +14,20 @@ const AboutUsMenuItem = () => {
           py: 4,
         }}
       >
-        <AboutUsOpt
-          title="Peniel Construcciones"
-          description="Encuentra todo lo que necesitas en un solo lugar para que estes
-        siempre"
-        />
-        <AboutUsOpt
-          sx={{ mt: 4 }}
-          title="Nuestros servicios"
-          description="Ofrecemos servicios que se acomodan a cualquier dimension"
-        />
+        <Animate animationNameIn="swing-in-top-fwd">
+          <AboutUsOpt
+            title="Peniel Construcciones"
+            description="Encuentra todo lo que necesitas en un solo lugar, remodela, construye y mejora
+          todo tu entorno con nuestras excelentes ofertas de servicio."
+          />
+        </Animate>
+        <Animate animationNameIn="swing-in-top-fwd" delay={500}>
+          <AboutUsOpt
+            sx={{ mt: 4 }}
+            title="Nuestros servicios"
+            description="Ofrecemos servicios que se acomodan a cualquier dimension"
+          />
+        </Animate>
         <ListServices />
       </Box>
       <Box

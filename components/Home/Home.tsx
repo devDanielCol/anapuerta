@@ -1,4 +1,4 @@
-import { Description } from "@mui/icons-material";
+import Description from "./Description/Description";
 import FacebookShareButton from "../Global/FacebookShare/FacebookShare";
 import Content from "../Layout/Content/General";
 import AboutUs from "./AboutUs/AboutUs";
@@ -27,6 +27,7 @@ const HomePage = () => {
       description={description}
       url={url}
       keywords={keywords}
+      ogImage="/image/logo.png"
     >
       <PageHeader />
       <AboutUs />

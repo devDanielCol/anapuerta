@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import ContactOpt from "../Atoms/ContactOpt";
+import Animate from "../../../Global/Animation/Animation";
 
 export const socialMedia = [
   {
@@ -25,7 +26,9 @@ const ToolpitOpt = () => {
       }}
     >
       {socialMedia.map(({ name, href }, i) => (
-        <ContactOpt linkTo={href} key={i} title={name} />
+        <Animate key={i} animationNameIn="scale-in-bl" delay={i * 150}>
+          <ContactOpt linkTo={href} title={name} />
+        </Animate>
       ))}
     </Box>
   );

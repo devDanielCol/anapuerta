@@ -5,6 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import AlternateEmailRoundedIcon from "@mui/icons-material/AlternateEmailRounded";
 import PermPhoneMsgRoundedIcon from "@mui/icons-material/PermPhoneMsgRounded";
+import Animate from "../../../Global/Animation/Animation";
 
 export const socialMedia = [
   {
@@ -50,13 +51,14 @@ const ToolpitOpt = () => {
       }}
     >
       {socialMedia.map(({ name, description, icon, href }, i) => (
-        <ContactOpt
-          linkTo={href}
-          key={i}
-          icon={icon}
-          title={name}
-          description={description}
-        />
+        <Animate key={i} animationNameIn="scale-in-bl" delay={i * 150}>
+          <ContactOpt
+            linkTo={href}
+            icon={icon}
+            title={name}
+            description={description}
+          />
+        </Animate>
       ))}
     </Box>
   );

@@ -3,15 +3,13 @@ import { FC } from "react";
 import PhoneCallbackIcon from "@mui/icons-material/PhoneCallback";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailIcon from "@mui/icons-material/Mail";
+import useTheme from "../../../util/hooks/useTheme";
 
 const EndPage: FC = () => {
+  const theme = useTheme();
   return (
-    <Container sx={{ pt: 5 }}>
-      <Box
-        sx={{
-          backgroundColor: "transparent",
-        }}
-      >
+    <Box sx={{ backgroundColor: theme.palette.background.default }}>
+      <Container sx={{ py: 5 }}>
         <Box
           sx={{
             width: "100%",
@@ -154,8 +152,8 @@ const EndPage: FC = () => {
             ></Grid>
           </Grid>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 
