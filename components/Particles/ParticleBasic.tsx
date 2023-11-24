@@ -10,7 +10,7 @@ const ParticleBasic = () => {
 
   return (
     <Particles
-      height="100vh"
+      height="100%"
       width="100%"
       id="tsparticles"
       init={particlesInit}
@@ -18,29 +18,34 @@ const ParticleBasic = () => {
         autoPlay: true,
         background: {
           color: {
-            value: "transparent",
+            value: "#ffffff",
           },
-          image: "",
-          position: "",
-          repeat: "",
-          size: "",
+          image:
+            "url('https://cdn.pixabay.com/photo/2021/01/13/03/27/heart-5913128_1280.png')",
+          position: "50% 50%",
+          repeat: "no-repeat",
+          size: "cover",
           opacity: 1,
         },
         backgroundMask: {
           composite: "destination-out",
           cover: {
             color: {
-              value: "#fff",
+              value: {
+                r: 255,
+                g: 255,
+                b: 255,
+              },
             },
             opacity: 1,
           },
-          enable: false,
+          enable: true,
         },
         defaultThemes: {},
         delay: 0,
         fullScreen: {
-          enable: false,
-          zIndex: -1,
+          enable: true,
+          zIndex: 1,
         },
         detectRetina: true,
         duration: 0,
@@ -49,7 +54,7 @@ const ParticleBasic = () => {
           detectsOn: "window",
           events: {
             onClick: {
-              enable: false,
+              enable: true,
               mode: "push",
             },
             onDiv: {
@@ -59,11 +64,11 @@ const ParticleBasic = () => {
               type: "circle",
             },
             onHover: {
-              enable: false,
-              mode: "repulse",
+              enable: true,
+              mode: "bubble",
               parallax: {
                 enable: false,
-                force: 2,
+                force: 60,
                 smooth: 10,
               },
             },
@@ -73,6 +78,11 @@ const ParticleBasic = () => {
             },
           },
           modes: {
+            trail: {
+              delay: 1,
+              pauseOnStop: false,
+              quantity: 1,
+            },
             attract: {
               distance: 200,
               duration: 0.4,
@@ -85,9 +95,11 @@ const ParticleBasic = () => {
               distance: 200,
             },
             bubble: {
-              distance: 200,
-              duration: 0.4,
+              distance: 400,
+              duration: 2,
               mix: false,
+              opacity: 1,
+              size: 100,
               divs: {
                 distance: 200,
                 duration: 0.4,
@@ -103,7 +115,7 @@ const ParticleBasic = () => {
               radius: 60,
             },
             grab: {
-              distance: 100,
+              distance: 400,
               links: {
                 blink: false,
                 consent: false,
@@ -138,11 +150,6 @@ const ParticleBasic = () => {
             slow: {
               factor: 3,
               radius: 200,
-            },
-            trail: {
-              delay: 1,
-              pauseOnStop: false,
-              quantity: 1,
             },
             light: {
               area: {
@@ -204,6 +211,7 @@ const ParticleBasic = () => {
               },
             },
             enable: false,
+            // maxSpeed: 50,
             mode: "bounce",
             overlap: {
               enable: true,
@@ -211,13 +219,14 @@ const ParticleBasic = () => {
             },
           },
           color: {
-            value: "#ff0000",
+            value: "#ffffff",
             animation: {
               h: {
                 count: 0,
-                enable: true,
+                enable: false,
                 offset: 0,
-                speed: 20,
+                speed: 1,
+                // delay: 0,
                 decay: 0,
                 sync: true,
               },
@@ -226,6 +235,7 @@ const ParticleBasic = () => {
                 enable: false,
                 offset: 0,
                 speed: 1,
+                // delay: 0,
                 decay: 0,
                 sync: true,
               },
@@ -234,6 +244,7 @@ const ParticleBasic = () => {
                 enable: false,
                 offset: 0,
                 speed: 1,
+                // delay: 0,
                 decay: 0,
                 sync: true,
               },
@@ -249,13 +260,14 @@ const ParticleBasic = () => {
               distance: 200,
               enable: false,
               rotate: {
-                x: 3000,
-                y: 3000,
+                x: 600,
+                y: 1200,
               },
             },
             center: {
               x: 50,
               y: 50,
+              // mode: "percent",
               radius: 0,
             },
             decay: 0,
@@ -290,7 +302,7 @@ const ParticleBasic = () => {
             },
             random: false,
             size: false,
-            speed: 3,
+            speed: 2,
             spin: {
               acceleration: 0,
               enable: false,
@@ -299,9 +311,7 @@ const ParticleBasic = () => {
             trail: {
               enable: false,
               length: 10,
-              fillColor: {
-                value: "#000000",
-              },
+              // fill: {},
             },
             vibrate: false,
             warp: false,
@@ -309,8 +319,8 @@ const ParticleBasic = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
-              factor: 1000,
+              // width: 1920,
+              // height: 1080,
             },
             limit: 0,
             value: 80,
@@ -320,15 +330,18 @@ const ParticleBasic = () => {
               enable: false,
               minimumValue: 0.1,
             },
-            value: 0.5,
+            value: 1,
             animation: {
               count: 0,
               enable: false,
-              speed: 2,
+              speed: 1,
               decay: 0,
+              // delay: 0,
               sync: false,
-              destroy: "none",
+              // mode: "auto",
               startValue: "random",
+              destroy: "none",
+              minimumValue: 0.1,
             },
           },
           reduceDuplicates: false,
@@ -344,26 +357,31 @@ const ParticleBasic = () => {
             },
           },
           shape: {
+            // close: true,
+            // fill: true,
             options: {},
             type: "circle",
           },
           size: {
             random: {
-              enable: false,
+              enable: true,
               minimumValue: 1,
             },
             value: {
-              min: 0.1,
-              max: 3,
+              min: 1,
+              max: 30,
             },
             animation: {
               count: 0,
               enable: false,
-              speed: 5,
+              speed: 40,
               decay: 0,
+              // delay: 0,
               sync: false,
-              destroy: "none",
+              // mode: "auto",
               startValue: "random",
+              destroy: "none",
+              minimumValue: 0.1,
             },
           },
           stroke: {
@@ -378,40 +396,6 @@ const ParticleBasic = () => {
             opacityRate: 1,
             sizeRate: 1,
             velocityRate: 1,
-          },
-          life: {
-            count: 0,
-            delay: {
-              random: {
-                enable: false,
-                minimumValue: 0,
-              },
-              value: 0,
-              sync: false,
-            },
-            duration: {
-              random: {
-                enable: false,
-                minimumValue: 0.0001,
-              },
-              value: 0,
-              sync: false,
-            },
-          },
-          rotate: {
-            random: {
-              enable: false,
-              minimumValue: 0,
-            },
-            value: 0,
-            animation: {
-              enable: false,
-              speed: 0,
-              decay: 0,
-              sync: false,
-            },
-            direction: "clockwise",
-            path: false,
           },
           destroy: {
             bounds: {},
@@ -487,12 +471,47 @@ const ParticleBasic = () => {
               move: 10,
             },
           },
+          life: {
+            count: 0,
+            delay: {
+              random: {
+                enable: false,
+                minimumValue: 0,
+              },
+              value: 0,
+              sync: false,
+            },
+            duration: {
+              random: {
+                enable: false,
+                minimumValue: 0.0001,
+              },
+              value: 0,
+              sync: false,
+            },
+          },
+          rotate: {
+            random: {
+              enable: false,
+              minimumValue: 0,
+            },
+            value: 0,
+            animation: {
+              enable: false,
+              speed: 0,
+              decay: 0,
+              sync: false,
+            },
+            direction: "clockwise",
+            path: false,
+          },
           orbit: {
             animation: {
               count: 0,
               enable: false,
               speed: 1,
               decay: 0,
+              delay: 0,
               sync: false,
             },
             enable: false,
@@ -509,13 +528,13 @@ const ParticleBasic = () => {
           links: {
             blink: false,
             color: {
-              value: "#ffffff",
+              value: "#fff",
             },
             consent: false,
             distance: 100,
-            enable: true,
+            enable: false,
             frequency: 1,
-            opacity: 0.4,
+            opacity: 1,
             shadow: {
               blur: 5,
               color: {
@@ -550,6 +569,13 @@ const ParticleBasic = () => {
         style: {},
         themes: [],
         zLayers: 100,
+        motion: {
+          disable: false,
+          reduce: {
+            factor: 4,
+            value: true,
+          },
+        },
       }}
     />
   );

@@ -1,7 +1,6 @@
 import { Container, Box, Typography, Grid } from "@mui/material";
 import { FC } from "react";
 import Link from "next/link";
-import ServiceCard from "./Molecules/ServiceCard";
 import Animate from "../../Global/Animation/Animation";
 import useTheme from "../../../util/hooks/useTheme";
 
@@ -101,76 +100,6 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
             >
               Leer más
             </Link>
-          </Box>
-          <Box sx={{ mt: "4rem" }}>
-            <Animate animationNameIn="swing-in-top-fwd" sx={{ width: "100%" }}>
-              <Grid
-                container
-                columnSpacing={10}
-                sx={{ justifyContent: "center" }}
-              >
-                <Grid
-                  item
-                  xs={10}
-                  sm={4}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    mb: 3,
-                  }}
-                >
-                  <ServiceCard
-                    description="Construccion de estructuras y edificaciones en general"
-                    img="./image/construccion.jpg"
-                    name="Construcciones"
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={10}
-                  sm={4}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    mb: 3,
-                  }}
-                >
-                  <ServiceCard
-                    description="Acabados modernos y con un excelente nivel de profesionalismo"
-                    img="./image/acabados.jpg"
-                    name="Acabados"
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={10}
-                  sm={4}
-                  md={4}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    mb: 3,
-                  }}
-                >
-                  <ServiceCard
-                    description="Remodelacion de interiores y exteriores. Dale la vuelta a la página."
-                    img="./image/remodelacion.jpg"
-                    name="Remodelaciones"
-                  />
-                </Grid>
-              </Grid>
-            </Animate>
           </Box>
         </Box>
       </Container>

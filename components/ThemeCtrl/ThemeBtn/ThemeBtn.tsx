@@ -1,15 +1,15 @@
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import { Button, SxProps, Typography } from "@mui/material";
+import { Box, SxProps } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { ISelector } from "../../../types/selectors";
 import { changeTheme } from "../../../redux/reducers/theme";
+import { ReactNode } from "react";
 
 interface IThemeButtonProps {
   sx?: SxProps;
+  children?: ReactNode;
 }
 
-const ThemeButton = ({ sx }: IThemeButtonProps) => {
+const ThemeButton = ({ sx, children }: IThemeButtonProps) => {
   const { theme: mode } = useSelector(
     ({ controllerTheme }: ISelector) => controllerTheme
   );
@@ -21,10 +21,9 @@ const ThemeButton = ({ sx }: IThemeButtonProps) => {
   };
 
   return (
-    <Button onClick={handleClick} sx={sx}>
-      <Typography sx={{ fontSize: "1rem", mr: 1 }}>Modo {mode}</Typography>
-      {mode === "light" ? <LightModeIcon /> : <DarkModeIcon />}
-    </Button>
+    <Box onClick={handleClick} sx={sx}>
+      {children}
+    </Box>
   );
 };
 

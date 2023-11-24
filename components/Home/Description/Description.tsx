@@ -90,7 +90,6 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                   mt: "4rem",
                   fontSize: { xs: "1.1rem", md: "1.5rem" },
                   textAlign: "center",
-                  color: "white",
                 }}
               >
                 Con nosotros{" "}
@@ -98,7 +97,6 @@ const LeftSectionGrid: FC<ILeftSectionGridProps> = () => {
                   sx={{
                     mt: 5,
                     fontSize: { xs: "1.1rem", md: "1.5rem" },
-                    color: "white",
                   }}
                   component="span"
                 >
